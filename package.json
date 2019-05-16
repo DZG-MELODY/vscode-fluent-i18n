@@ -1,0 +1,51 @@
+{
+  "name": "fluent-i18n",
+  "displayName": "fluent-i18n",
+  "description": "an auto-completion tool to help input i18n keys for js or vue",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DZG-MELODY/vscode-fluent-i18n.git"
+  },
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:vue"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": [
+      {
+        "title": "Fluent I18n",
+        "properties": {
+          "fluentI18n.autoCompletion.keys": {
+            "type": "array",
+            "default": [],
+            "description": "i18n keys: when auto-completion is triggered, these keys will be display to fill",
+            "scope": "window"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5",
+    "vscode": "^1.1.34",
+    "tslint": "^5.16.0",
+    "@types/node": "^12.0.2",
+    "@types/mocha": "^5.2.6"
+  }
+}
