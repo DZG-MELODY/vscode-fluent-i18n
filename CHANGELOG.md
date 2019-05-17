@@ -1,9 +1,14 @@
-# Change Log
-
-All notable changes to the "fluent-i18n" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+# Changelog
 
 ## [Unreleased]
 
-- Initial release
+### Changed
+
+- add some configurations
+
+## [0.0.1] - 2019-05-17
+
+### Added
+
+- init project
+- finish base functions

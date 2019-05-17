@@ -1,8 +1,14 @@
 {
-  "name": "fluent-i18n",
+  "name": "vscode-fluent-i18n",
   "displayName": "fluent-i18n",
   "description": "an auto-completion tool to help input i18n keys for js or vue",
   "version": "0.0.1",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#fff",
+    "theme": "light"
+  },
+  "publisher": "dzgmelody",
   "repository": {
     "type": "git",
     "url": "https://github.com/DZG-MELODY/vscode-fluent-i18n.git"
@@ -35,6 +41,7 @@
     ]
   },
   "scripts": {
+    "build": "vsce package",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",

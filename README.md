@@ -1,65 +1,29 @@
-# fluent-i18n README
+# fluent-i18n（zh-CN）
 
-This is the README for your extension "fluent-i18n". After writing up a brief description, we recommend including the following sections.
+i18n 通常方案是根据不同语言查找对应的map。这种方案在开发时存在的一大问题是大量的key，使开发者无法全部记忆，每次使用都需要查找映射表，严重影响开发效率。本项目是为了解决该问题，提高开发效率：
 
-## Features
+- 在js中使用：
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![use in js](./images/ex-js.gif)
 
-For example if there is an image subfolder under your extension project workspace:
+- 在vue模板中使用：
 
-\!\[feature X\]\(images/feature-x.png\)
+![use in vue](./images/ex-vue.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 使用方式
 
-## Requirements
+下载插件后，在配置中添加keys
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```json
+{
+  "fluentI18n.autoCompletion.keys": [
+    "confirm",
+    "OK",
+    "cancel",
+    "Error",
+    "Hello i18n"
+  ]
+}
+```
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+在js,ts,vue 文件中会自动获取配置中keys,并在输入`t(`或者`$t(`时触发auto-completion
